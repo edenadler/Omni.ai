@@ -35,6 +35,7 @@
 				)
 		}
 	});
+
 	var ProjectInfoComp= React.createClass({
 
 		render:function(){
@@ -50,17 +51,21 @@
 				)
 		}
 	});
+
+
 	var TeamMember = React.createClass({
 
 		render:function(){
 			return(
 				<div className="team-member">
-				<div>{this.props.name}</div>
-				<img src={this.props.profilepic}></img>
+					<div>{this.props.name}</div>
+					<img src={this.props.profilepic}></img>
 				</div>
 				)
 		}
-	})
+	});
+
+	
 	var NextStepComp = React.createClass({
 		render:function(){
 			return(

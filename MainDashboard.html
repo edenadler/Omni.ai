@@ -26,18 +26,63 @@
 	var numOfProjects = 4;
 	var teamMembers = {};
 
+	var AppScreen = React.createClass({
+		
+		handleClickedProjectItem: function(update){
+			this.setState({isShowMain: update});
+		},
+		getInitialState: function(){
+			return{
+				isShowMain: true
+			}
+		},
+		render: function(){
+
+			return(
+
+				<div>
+					{this.state.isShowMain ? <MainDash handleClickedProjectItem={this.handleClickedProjectItem}/> : <ProjDash />}
+				</div>
+
+			)
+
+		}
+	});
+
 	var MainDash = React.createClass({
 		render: function(){
 
 			return(
 
 				<div>
-					<ProjectItem /><ProjectItem />
-					<ProjectItem /><ProjectItem />
+					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} />
 				</div>
 
 			)
 
+		}
+	});
+
+	var ProjDash = React.createClass({
+		getDefaultProps: function(){
+			return{
+				ProjectInfo:{
+							title:"Kendama",
+							teamMembers: ["Gideon", "Valentine", "Eden", "Aviram"],
+							ProfilePics:["assets/profilepic/gideon.jpg","assets/profilepic/valentine.jpg",,"assets/profilepic/eden.jpg","assets/profilepic/aviram.jpg"]
+				},
+
+			}
+		},
+		render: function(){
+			var title = this.props.ProjectInfo.title;
+			return(
+					<div>
+						<ProjectInfoComp title ={title} projectInfo = {this.props.ProjectInfo}/>
+						<NextStepComp />
+					</div>
+				)
 		}
 	});
 
@@ -70,7 +115,9 @@
 		handleClickProjectItem: function(e){
 			e.preventDefault();
 
-			//add logic here
+		
+
+			this.props.handleClickedProjectItem(false);
 
 		},
 		render: function(){
@@ -89,8 +136,49 @@
 		}
 	});
 
+	var ProjectInfoComp= React.createClass({
+
+		render:function(){
+			var TeamMembers = this.props.projectInfo.teamMembers;
+			var ProfilePics =this.props.projectInfo.ProfilePics;
+ 
+			return(
+				<div className="project-info">
+					<h1>{this.props.projectInfo.title}</h1>
+					<TeamMember name = {TeamMembers[1]} profilepic={this.props.projectInfo.ProfilePics[0]}/>
+				</div>
+
+				)
+		}
+	});
+
+
+	var TeamMember = React.createClass({
+
+		render:function(){
+			return(
+				<div className="team-member">
+					<div>{this.props.name}</div>
+					<img src={this.props.profilepic}></img>
+				</div>
+				)
+		}
+	});
+
+	
+	var NextStepComp = React.createClass({
+		render:function(){
+			return(
+			<div id="next-step">
+				<h1>Email Natalie back</h1>
+			</div>
+			)
+		}
+
+	});
+
 	ReactDOM.render(
-		<MainDash />,
+		<AppScreen />,
 		document.getElementById('main-page')
 	)
 		
