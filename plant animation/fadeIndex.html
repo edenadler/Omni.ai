@@ -27,6 +27,7 @@
     <div class="right">
 
         <button type="submit" id="submit" >Submit </button>
+        <button type="submit" id="lower" >Lower </button>
     </div>
 
 
@@ -50,6 +51,27 @@
                             $(".showimg").attr('src', (newVar) + ".png");
                             $(".showimg").eq(0).attr('id', newVar);
                         })
+                        .fadeIn(200);
+
+                $(".backimg").delay(1010).fadeOut(500, function () {
+                    $(".backimg").attr('src', (newVar) + ".png");
+                    $(".backimg").eq(0).attr('id', newVar);
+                }).fadeIn(10);
+            }
+
+        });
+
+        $("#lower").click(function (e) {
+            var myVar = parseInt($(".showimg").eq(0).attr('id'));
+            var newVar = myVar - 1;
+            console.log(myVar);
+            e.preventDefault();
+            if(newVar<8){
+                $(".showimg")
+                        .delay(1000).fadeOut(0, function () {
+                    $(".showimg").attr('src', (newVar) + ".png");
+                    $(".showimg").eq(0).attr('id', newVar);
+                })
                         .fadeIn(200);
 
                 $(".backimg").delay(1010).fadeOut(500, function () {
