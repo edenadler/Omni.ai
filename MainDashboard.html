@@ -9,15 +9,20 @@
 	<script src="https://fb.me/react-dom-0.14.0.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
 	<style>
-	body{display: inline-block; position: relative;}
-	.projectItem{height: 150px; width: 400px; display: inline-block; position: relative; margin: 20px;}
+	body{display: inline-block; position: relative; background-color: #F7F0F0;}
+	.font-white{color: white;}
+	.projectItem{height: 150px; width: 400px; display: inline-block; position: relative; margin: 40px; cursor: pointer; background-color: #18A999;}
 	.projectName{margin: 15px; text-align: center;}
+	.header{width: 100%; height: 150px; background-color: #484349;}
+	.green-line{width: 100%; height:10px;background-color: #109648;}
 	.center-items{justify-content: center;}
 	.plant{height: 180px; width: 100px; border: 1px solid blue; position: absolute; top: 0; left: 0;}
 	</style>
 </head>
 <body>
 	<div class="mdl-layout center-items">
+		<div class="header"></div>
+		<div class="green-line"></div>
 		<div class="mdl-grid" id="main-page"></div>
 	</div>
 
@@ -26,18 +31,63 @@
 	var numOfProjects = 4;
 	var teamMembers = {};
 
+	var AppScreen = React.createClass({
+		
+		handleClickedProjectItem: function(update){
+			this.setState({isShowMain: update});
+		},
+		getInitialState: function(){
+			return{
+				isShowMain: true
+			}
+		},
+		render: function(){
+
+			return(
+
+				<div>
+					{this.state.isShowMain ? <MainDash handleClickedProjectItem={this.handleClickedProjectItem}/> : <ProjDash />}
+				</div>
+
+			)
+
+		}
+	});
+
 	var MainDash = React.createClass({
 		render: function(){
 
 			return(
 
 				<div>
-					<ProjectItem /><ProjectItem />
-					<ProjectItem /><ProjectItem />
+					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} />
 				</div>
 
 			)
 
+		}
+	});
+
+	var ProjDash = React.createClass({
+		getDefaultProps: function(){
+			return{
+				ProjectInfo:{
+							title:"Kendama",
+							teamMembers: ["Gideon", "Valentine", "Eden", "Aviram"],
+							ProfilePics:["assets/profilepic/gideon.jpg","assets/profilepic/valentine.jpg",,"assets/profilepic/eden.jpg","assets/profilepic/aviram.jpg"]
+				},
+
+			}
+		},
+		render: function(){
+			var title = this.props.ProjectInfo.title;
+			return(
+					<div>
+						<ProjectInfoComp title ={title} projectInfo = {this.props.ProjectInfo}/>
+						<NextStepComp />
+					</div>
+				)
 		}
 	});
 
@@ -70,7 +120,9 @@
 		handleClickProjectItem: function(e){
 			e.preventDefault();
 
-			//add logic here
+		
+
+			this.props.handleClickedProjectItem(false);
 
 		},
 		render: function(){
@@ -79,7 +131,7 @@
 
 				<div onClick={this.handleClickProjectItem} className="projectItem mdl-card mdl-cell--6-col mdl-shadow--2dp through mdl-shadow--16dp">
 					<div className="mdl-card__title center-items">
-						<h3 className="projectName mdl-card__title-text">{this.props.projectName}</h3>
+						<h3 className="projectName mdl-card__title-text font-white">{this.props.projectName}</h3>
 						<PlantImage />
 					</div>
 				</div>
@@ -89,8 +141,49 @@
 		}
 	});
 
+	var ProjectInfoComp= React.createClass({
+
+		render:function(){
+			var TeamMembers = this.props.projectInfo.teamMembers;
+			var ProfilePics =this.props.projectInfo.ProfilePics;
+ 
+			return(
+				<div className="project-info">
+					<h1>{this.props.projectInfo.title}</h1>
+					<TeamMember name = {TeamMembers[1]} profilepic={this.props.projectInfo.ProfilePics[0]}/>
+				</div>
+
+				)
+		}
+	});
+
+
+	var TeamMember = React.createClass({
+
+		render:function(){
+			return(
+				<div className="team-member">
+					<div>{this.props.name}</div>
+					<img src={this.props.profilepic}></img>
+				</div>
+				)
+		}
+	});
+
+	
+	var NextStepComp = React.createClass({
+		render:function(){
+			return(
+			<div id="next-step">
+				<h1>Email Natalie back</h1>
+			</div>
+			)
+		}
+
+	});
+
 	ReactDOM.render(
-		<MainDash />,
+		<AppScreen />,
 		document.getElementById('main-page')
 	)
 		
