@@ -1,30 +1,99 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://fb.me/react-0.14.0.js"></script>
 	<script src="https://fb.me/react-dom-0.14.0.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
 	<style>
-		body{margin-top:30px;}
-		.label{margin-right:10px;}
-		.repoItem{background:#f9f9f9;border: #f4f4f4 1px solid;padding:10px 10px;border-radius:5px;margin-bottom:10px;}
-		.form-control{width:450px !important; margin-right:10px;}
-		form{text-align: center;margin-bottom:35px;background:#f4f4f4; padding: 20px 10px;border-radius:10px;}
+	body{display: inline-block; position: relative;}
+	.projectItem{height: 150px; width: 400px; display: inline-block; position: relative; margin: 20px;}
+	.projectName{margin: 15px; text-align: center;}
+	.center-items{justify-content: center;}
+	.plant{height: 180px; width: 100px; border: 1px solid blue; position: absolute; top: 0; left: 0;}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div id="content-box"></div>
-			</div>
-		</div>
+	<div class="mdl-layout center-items">
+		<div class="mdl-grid" id="main-page"></div>
 	</div>
 
 	<script type="text/babel">
-	
+
+	var numOfProjects = 4;
+	var teamMembers = {};
+
+	var MainDash = React.createClass({
+		render: function(){
+
+			return(
+
+				<div>
+					<ProjectItem /><ProjectItem />
+					<ProjectItem /><ProjectItem />
+				</div>
+
+			)
+
+		}
+	});
+
+	var PlantImage = React.createClass({
+		render: function(){
+
+			return(
+
+				<div className="plant">
+
+				</div>
+
+			)
+
+		}
+	});
+
+	var ProjectItem = React.createClass({
+		getDefaultProps: function(){
+			return {
+				projectName: "Untitled",
+			}
+		},
+		getInitialState: function(){
+			return{
+				projectProgress: 0,
+
+			}
+		},
+		handleClickProjectItem: function(e){
+			e.preventDefault();
+
+			//add logic here
+
+		},
+		render: function(){
+
+			return(
+
+				<div onClick={this.handleClickProjectItem} className="projectItem mdl-card mdl-cell--6-col mdl-shadow--2dp through mdl-shadow--16dp">
+					<div className="mdl-card__title center-items">
+						<h3 className="projectName mdl-card__title-text">{this.props.projectName}</h3>
+						<PlantImage />
+					</div>
+				</div>
+
+			)
+
+		}
+	});
+
+	ReactDOM.render(
+		<MainDash />,
+		document.getElementById('main-page')
+	)
+		
 	</script>
 </body>
 </html>
