@@ -1,29 +1,18 @@
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<title>Omni.ai</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://fb.me/react-0.14.0.js"></script>
 	<script src="https://fb.me/react-dom-0.14.0.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
-	<style>
-	body{display: inline-block; position: relative; background-color: #F7F0F0;}
-	.font-white{color: white;}
-	.projectItem{height: 150px; width: 400px; display: inline-block; position: relative; margin: 40px; cursor: pointer; background-color: #18A999;}
-	.projectName{margin: 15px; text-align: center;}
-	.header{width: 100%; height: 150px; background-color: #484349;}
-	.green-line{width: 100%; height:10px;background-color: #109648;}
-	.center-items{justify-content: center;}
-	.plant{height: 180px; width: 100px; border: 1px solid blue; position: absolute; top: 0; left: 0;}
-	</style>
 </head>
 <body>
-	<div class="mdl-layout center-items">
-		<div class="header"></div>
-		<div class="green-line"></div>
-		<div class="mdl-grid" id="main-page"></div>
+	<div>
+		<div id="main-page"></div>
 	</div>
 
 	<script type="text/babel">
@@ -60,8 +49,24 @@
 			return(
 
 				<div>
-					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
-					<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} /><ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} />
+					<header>
+						<img src="assets/logo.png" alt=""/>
+
+						<div className="title"><h1>PROJECTS</h1></div>
+					</header>
+					<div className="green-line"></div>
+					<main>
+						<div className="container">
+							<div className="row">
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+							</div>
+							<div className="row">
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+							</div>
+						</div>
+					</main>
 				</div>
 
 			)
@@ -84,8 +89,35 @@
 			var title = this.props.ProjectInfo.title;
 			return(
 					<div>
-						<ProjectInfoComp title ={title} projectInfo = {this.props.ProjectInfo}/>
-						<NextStepComp />
+						<header>
+							<img src="assets/logo.png" alt=""/>
+							<div className="title">
+								<h1>HACKATHON</h1>
+							</div>
+						</header>
+						<div className="green-line"></div>
+						<main>
+							<div className="container">
+								<div className="row">
+									<div className="col-md-4">
+										<div className="main-plant">
+											<img src="assets/plant.png" alt=""/>
+										</div>
+									</div>
+									<div className="col-md-8">
+										<NextStepComp />
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-6">
+										<RecentActivity />
+									</div>
+									<div className="col-md-6">
+										<TeamMember />
+									</div>
+								</div>
+							</div>
+						</main>
 					</div>
 				)
 		}
@@ -95,9 +127,8 @@
 		render: function(){
 
 			return(
-
 				<div className="plant">
-
+					<img src="assets/plant.png" alt=""/>
 				</div>
 
 			)
@@ -129,31 +160,15 @@
 
 			return(
 
-				<div onClick={this.handleClickProjectItem} className="projectItem mdl-card mdl-cell--6-col mdl-shadow--2dp through mdl-shadow--16dp">
-					<div className="mdl-card__title center-items">
-						<h3 className="projectName mdl-card__title-text font-white">{this.props.projectName}</h3>
+				<div onClick={this.handleClickProjectItem}>
+					<div className="project-item col-lg-6">
 						<PlantImage />
+						<div className="project-card">
+							<h2>{this.props.projectName}</h2>
+						</div>
 					</div>
 				</div>
-
 			)
-
-		}
-	});
-
-	var ProjectInfoComp= React.createClass({
-
-		render:function(){
-			var TeamMembers = this.props.projectInfo.teamMembers;
-			var ProfilePics =this.props.projectInfo.ProfilePics;
- 
-			return(
-				<div className="project-info">
-					<h1>{this.props.projectInfo.title}</h1>
-					<TeamMember name = {TeamMembers[1]} profilepic={this.props.projectInfo.ProfilePics[0]}/>
-				</div>
-
-				)
 		}
 	});
 
@@ -162,10 +177,7 @@
 
 		render:function(){
 			return(
-				<div className="team-member">
-					<div>{this.props.name}</div>
-					<img src={this.props.profilepic}></img>
-				</div>
+				<div className="team-members component"></div>
 				)
 		}
 	});
@@ -174,9 +186,16 @@
 	var NextStepComp = React.createClass({
 		render:function(){
 			return(
-			<div id="next-step">
-				<h1>Email Natalie back</h1>
-			</div>
+			<div className="next-step component"></div>
+			)
+		}
+
+	});
+
+	var RecentActivity = React.createClass({
+		render:function(){
+			return(
+			<div className="recent-activity component"></div>
 			)
 		}
 

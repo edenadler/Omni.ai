@@ -13,8 +13,9 @@ header{
 .title{
 	color:#D0D0D0;
 		text-align: left;
-
-
+}
+.project-item{
+	cursor: pointer;
 }
 
 header img{
