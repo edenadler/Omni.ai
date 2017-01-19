@@ -24,6 +24,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/graph.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7158,
+		"inputAbbreviatedPath": "\/assets\/graph.png",
+		"outputAbbreviatedPath": "\/assets\/graph.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/icons\/calendar1.png": {
 		"fileType": 32768,
 		"ignore": 0,

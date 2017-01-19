@@ -202,7 +202,15 @@ width: 16px;
 	
 }
 .project-buzz{
+	color:white;
+	padding-top: 1px;	
+	padding-left: 20px;
+
 	background-color: #484349;
+}
+.project-buzz h3{
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .meetname{
 	font-weight: 700;
@@ -219,3 +227,25 @@ width: 16px;
 .meetright{
 	margin-left: 52px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.project-buzz {
+}
+
+
