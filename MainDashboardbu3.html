@@ -12,7 +12,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
 </head>
 <body>
-
+	<div>
+	<div class="loader">
+    <div class="circle"></div>
+	</div>
 		<div id="main-page"></div>
 		<div id="notification">
 			<p><span>natalie@israeltechallenge.com</span> just sended you an email regarding the Zara project</p>
@@ -27,12 +30,19 @@
 	// function checkScore(){
 	// 	checkScore("omni", 10);
 	// }
+		var preloader = function (time) {
+        $(".loader").fadeIn("slow");
+        $(".loader").delay(time).fadeOut(500);
+    };
 
 	var AppScreen = React.createClass({
 		
 		handleClickedProjectItem: function(update){
-
-			this.setState({isShowMain: update});
+			var that = this;
+			preloader(1000);
+			setTimeout(function(){console.log(that);
+				that.setState({isShowMain: update});},1600);
+			
 		},
 		getInitialState: function(){
 			return{
@@ -372,16 +382,16 @@
 				
 				<li>
 					<span> <img src='assets/icons/gmail.png' alt="" />
-					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">5 days ago</span>
+					</span><span><strong>Aviram </strong>answered Jack on <span className="activity-type">Gmail</span></span><span className="date-left avi">5 days ago</span>
 				</li>
 				
 				<li>
 					<span> <img src='assets/icons/github.png' alt="" />
-					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">11/Jan/17</span>
+					</span><span><strong>Eden </strong>push the project structre to  <span className="activity-type">Github</span> </span><span className="date-left eden">11/Jan/17</span>
 				</li>
 				<li>
 					<span> <img src='assets/icons/slack.png' alt="" />
-					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">5/Jan/17</span>
+					</span><span><strong>Valentine </strong>created a new <span className="activity-type">Slack</span> channel </span><span className="date-left valentine">5/Jan/17</span>
 				</li>
 				</ul>
 			</div>
@@ -447,7 +457,10 @@
 		<AppScreen />,
 		document.getElementById('main-page')
 	)
-		
+
 	</script>
+	
+
+
 </body>
 </html>
