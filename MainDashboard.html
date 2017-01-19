@@ -83,7 +83,7 @@
 				ProjectInfo:{
 							title:"Kendama",
 							teamMembers: ["Gideon", "Valentine", "Eden", "Aviram"],
-							ProfilePics:["assets/profilepic/gideon.jpg","assets/profilepic/valentine.jpg",,"assets/profilepic/eden.jpg","assets/profilepic/aviram.jpg"]
+							ProfilePics:["assets/profilepic/Gideon.png","assets/profilepic/Valentine.png","assets/profilepic/Eden.png","assets/profilepic/Aviram.png"]
 				},
 
 			}
@@ -187,14 +187,15 @@
 	var TeamMembers = React.createClass({
 
 		render:function(){
-			console.log(this.props.picture);
 			return(
 				<div className="team-members component">
+					<h3>Team Members</h3>
 					<div>
-						<img src={this.props.picture[0]} alt="" />
-						<img src={this.props.picture[1]} alt="" />
-						<img src={this.props.picture[2]} alt="" />
-						<img src={this.props.picture[3]} alt="" />
+						<img className="profile-pictures" src={this.props.picture[0]} alt="" />
+						<img className="profile-pictures" src={this.props.picture[1]} alt="" />
+						<img className="profile-pictures" src={this.props.picture[2]} alt="" />
+						<img className="profile-pictures" src={this.props.picture[3]} alt="" />
+						<img className="profile-pictures" src="" alt="" />
 					</div>
 				</div>
 				)

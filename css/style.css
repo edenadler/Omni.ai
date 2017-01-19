@@ -24,7 +24,6 @@ header{
 
 header img{
 }
-
 main{
 	padding-bottom: 50px;
 	background-color: #F7F0F0;
@@ -137,7 +136,18 @@ width: 16px;
 .recent-activity .activity-type{
 	color:#18A999;
 }
+.profile-pictures{
+	margin: 10px;
+	width: 60px;
+	height: auto;
+}
+.team-members h3{
+margin-top: 15px;
+	
+}
 .team-members{
+	padding-left: 20px;
+	padding-top: 2px;
 	
 }
 .project-buzz{
