@@ -124,7 +124,7 @@
 										<ProjectBuzz />
 									</div>
 									<div className="col-md-6">
-										<TeamMembers />
+										<TeamMembers picture={this.props.ProjectInfo.ProfilePics}/>
 									</div>
 								</div>
 							</div>
@@ -187,8 +187,16 @@
 	var TeamMembers = React.createClass({
 
 		render:function(){
+			console.log(this.props.picture);
 			return(
-				<div className="team-members component"></div>
+				<div className="team-members component">
+					<div>
+						<img src={this.props.picture[0]} alt="" />
+						<img src={this.props.picture[1]} alt="" />
+						<img src={this.props.picture[2]} alt="" />
+						<img src={this.props.picture[3]} alt="" />
+					</div>
+				</div>
 				)
 		}
 	});
