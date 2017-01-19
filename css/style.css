@@ -142,11 +142,10 @@ color:#484349;
 .recent-activity{
 	padding-left: 20px;
 	padding-top: 2px;
-	
 }
+
 .recent-activity h3{
 margin-top: 15px;
-	
 }
 .recent-activity .date-left{
 margin-left: 80px;
@@ -175,10 +174,48 @@ width: 16px;
 .recent-activity .activity-type{
 	color:#18A999;
 }
+.calendar{
+	padding-left: 20px;
+	padding-top: 2px;
+}
+.calendar h3{
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.calendar ul{
+	list-style: none;
+	padding: 0;
+}
+.calendar ul li{
+	vertical-align: middle;
+}
+.calendar ul li span{
+	vertical-align: middle;
+
+}
+.calendar ul li img{
+	margin-right: 10px;
+	vertical-align: top;
+	width: 36px;
+}
 .team-members{
 	
 }
 .project-buzz{
-	
 	background-color: #484349;
+}
+.meetname{
+	font-weight: 700;
+}
+.meetbottomtext{
+	font-size: 13px;
+	font-weight: 700;
+	color: #49c2b9;
+}
+.calenderevent{
+	display: inline-block;
+	margin-bottom: 18px;
+}
+.meetright{
+	margin-left: 52px;
 }
