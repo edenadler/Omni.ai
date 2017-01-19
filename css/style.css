@@ -1,7 +1,11 @@
 
 body{
 	margin: 0;
+	font-family: 'Muli'
 	}
+strong { vertical-align: bottom; 
+}
+
 header{
 	background-color: #484349;
 	height: 175px;
@@ -20,8 +24,10 @@ header{
 
 header img{
 }
+
 main{
 	padding-bottom: 50px;
+	background-color: #F7F0F0;
 }
 .green-line{
 	width: 100%;
@@ -52,14 +58,17 @@ main{
 	width: 80px
 }
 .row{
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 /***********project Dash***************/
 .component{
+	width: 500px;
+	height: 200px;
 	/* Rectangle 3 Copy 2: */
 box-shadow: 0 1px 15px 1px rgba(0,0,0,0.18);
 border-radius: 3px;
+background-color: white;
 }
 .main-plant{
 	padding-left: 80px;
@@ -73,10 +82,43 @@ border-radius: 3px;
 	height:250px;
 }
 .recent-activity{
-	width: 500px;
-	height: 200px
+	padding-left: 20px;
+	padding-top: 2px;
+	
+}
+.recent-activity h3{
+margin-top: 15px;
+	
+}
+.recent-activity .date-left{
+margin-left: 80px;	
+}
+.recent-activity ul{
+	list-style: none;
+	margin-top: 15px;
+	padding: 0;
+}
+.recent-activity ul li{
+margin-top: 12px;
+vertical-align: middle;
+
+}
+.recent-activity ul li span{
+vertical-align: middle;
+
+}
+.recent-activity ul li img{
+margin-right: 10px;
+vertical-align: middle;
+width: 16px;
+}
+.recent-activity .activity-type{
+	color:#18A999;
 }
 .team-members{
-	width: 500px;
-	height: 200px
+	
+}
+.project-buzz{
+	
+	background-color: #484349;
 }

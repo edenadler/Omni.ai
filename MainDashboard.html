@@ -35,7 +35,10 @@
 			return(
 
 				<div>
-					{this.state.isShowMain ? <MainDash handleClickedProjectItem={this.handleClickedProjectItem}/> : <ProjDash />}
+					{/*
+					{this.state.isShowMain ? <MainDash handleClickedProjectItem={this.handleClickedProjectItem}/> : 
+					*/}
+					<ProjDash />}
 				</div>
 
 			)
@@ -113,7 +116,15 @@
 										<RecentActivity />
 									</div>
 									<div className="col-md-6">
-										<TeamMember />
+										<Calendar />
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-6">
+										<ProjectBuzz />
+									</div>
+									<div className="col-md-6">
+										<TeamMembers />
 									</div>
 								</div>
 							</div>
@@ -173,7 +184,7 @@
 	});
 
 
-	var TeamMember = React.createClass({
+	var TeamMembers = React.createClass({
 
 		render:function(){
 			return(
@@ -195,11 +206,52 @@
 	var RecentActivity = React.createClass({
 		render:function(){
 			return(
-			<div className="recent-activity component"></div>
+			<div className="recent-activity component">
+				<h3>Recent Activity</h3>
+				<ul>
+				<li>
+					<span> <img src='assets/icons/docs.png' alt="" />
+					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">2 days ago</span>
+				</li>
+				
+				<li>
+					<span> <img src='assets/icons/gmail.png' alt="" />
+					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">5 days ago</span>
+				</li>
+				
+				<li>
+					<span> <img src='assets/icons/github.png' alt="" />
+					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">11/Jan/17</span>
+				</li>
+				<li>
+					<span> <img src='assets/icons/slack.png' alt="" />
+					</span><span><strong>Gideon </strong>editited the <span className="activity-type">Google Docs</span> document </span><span className="date-left">5/Jan/17</span>
+				</li>
+				</ul>
+			</div>
 			)
 		}
 
 	});
+	var ProjectBuzz = React.createClass({
+		render:function(){
+			return(
+			<div className="project-buzz component"></div>
+			)
+		}
+
+	});
+	var Calendar = React.createClass({
+		render:function(){
+			return(
+			<div className="calendar component">
+				
+			</div>
+			)
+		}
+
+	});
+
 
 	ReactDOM.render(
 		<AppScreen />,
