@@ -5,11 +5,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/style.css">
-
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
-
+	<script src="https://fb.me/react-0.14.0.js"></script>
+	<script src="https://fb.me/react-dom-0.14.0.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
 </head>
 <body>
@@ -18,11 +16,8 @@
 	</div>
 
 	<script type="text/babel">
-		
-		var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup; // ES5 with react-with-addons.js
-	
-	var numOfProjects = 4;
 
+	var numOfProjects = 4;
 	var teamMembers = {};
 
 	var AppScreen = React.createClass({
@@ -92,13 +87,16 @@
 		},
 		getInitialState: function(){
 			return{
-				projectProgress: 1,
-				plants: ["1.png","2.png"]
+				projectProgress: 1
 			}
 		},
 		componentDidMount: function() {
   			this.changePlant();
-		},
+
+
+
+  },
+
 		changePlant: function(){
 			  console.log("i work");
 
@@ -106,7 +104,7 @@
         var myVar = $(".showimg").eq(0).attr('id');
         console.log(myVar);
 
-        $("#encourage-btn").click(this.handleAdd);
+        $("#encourage-btn").click(grow.bind(this));
 
         $("#lower").click(function (e) {
             var myVar = parseInt($(".showimg").eq(0).attr('id'));
@@ -131,14 +129,13 @@
 
         function grow(e){
             e.preventDefault();
-            var currentState = this.state.projectProgress;
-            var nextState = this.state.projectProgress + 1
 
 
-	       	 this.setState({projectProgress:nextState});
+	       	 this.setState({projectProgress:(this.state.projectProgress + 1)});
+	        	console.log(this.state.projectProgress)
             // var myVar = parseInt($(".showimg").eq(0).attr('id'));
             var myVar = this.state.projectProgress;
-            var newVar = myVar
+             var newVar = myVar
 
             console.log(myVar);
             if(newVar<8){
@@ -158,12 +155,7 @@
         }
 
 		},
-		handleAdd: function() {
-			console.log(this)
-    		const newItems = this.state.plants.concat();
-    		console.log(newItems);
-   			this.setState({items: newItems});
-  		},
+
 		getDefaultProps: function(){
 			return{
 				ProjectInfo:{
@@ -176,20 +168,13 @@
 		},
 		
 		render: function(){
-			const items = this.state.plants.map((item, i) => (
-      <div key={item}>
-      <img className="plantimg showimg" id="1" src={item}/>
-      </div>
-
-    ));
-						console.log("map",items);
 
 			var title = this.props.ProjectInfo.title;
 			var projectProgress = this.state.projectProgress + ".png"
 			return(
 					<div>
 						<header>
-							<img onClick={this.returnToHome} className = "icon-back" src="assets/icons/icon-back.png"/>
+							<img className ="icon-back" src="assets/icons/icon-back.png"/>
 							<img onClick={this.returnToHome} src="assets/logo.png" alt=""/>
 							<div className="title">
 								<h1>HACKATHON</h1>
@@ -197,22 +182,15 @@
 						</header>
 						<div className="green-line"></div>
 						<main>
-						  
-        
 							<div className="container">
 								<div className="row firstrow">
 									<div className="col-md-4">
-							<div className="main-plant">
-									 <ReactCSSTransitionGroup
-									   transitionAppear={true}
-      									transitionAppearTimeout={500}
-								          transitionName="example"
-								          transitionEnterTimeout={500}
-								          transitionLeaveTimeout={300}>
-										   {items}
-   											
-										</ReactCSSTransitionGroup>
-									</div>	
+										<div className="main-plant">
+											<div className="plants">
+										        <img className="plantimg showimg" id="1" src={projectProgress}/>
+										        <img className="plantimg backimg" id="0" src="1.png" />
+   											</div>
+										</div>
 									</div>
 									<div className="col-md-8">
 										<NextStepComp />
@@ -235,7 +213,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</main>
 					</div>
 				)
@@ -309,14 +286,14 @@
 	var NextStepComp = React.createClass({
 	changeButton: function(e){
 	
-	// $(e.target).fadeOut(200);
-	// setTimeout(function(){	$(".load").fadeIn(200);
-	// 	},200)
-	// setTimeout(function(){$(e.target).text("✓");
-	// $(e.target).fadeIn(200);
-	// $(".load").fadeOut(400);
-	// }, 1500);
-	// $(e.target).attr("disabled", "true");
+	$(e.target).fadeOut(200);
+	setTimeout(function(){	$(".load").fadeIn(200);
+		},200)
+	setTimeout(function(){$(e.target).text("✓");
+	$(e.target).fadeIn(200);
+	$(".load").fadeOut(400);
+	}, 1500);
+	$(e.target).attr("disabled", "true");
 
 
 	
@@ -325,7 +302,6 @@
 		render:function(){
 			return(
 			<div className="next-step component">
-
 				<h3>Next Step</h3>
 				<h4 className ="water">Water this plant</h4>
 				<h2>Eden has to respond to this email</h2>

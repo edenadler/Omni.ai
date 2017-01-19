@@ -32,15 +32,21 @@ header{
 	color:#D0D0D0;
 		text-align: left;
 }
-.project-item{
+.project-item, header img{
 	cursor: pointer;
 }
 
 header img{
 }
+header .icon-back{
+	display: block;
+	float: left;
+	margin-top: 25px;
+}
 main{
 	padding-bottom: 50px;
 	background-color: #F7F0F0;
+	padding-left: 50px;
 }
 .green-line{
 	width: 100%;
@@ -73,6 +79,9 @@ main{
 .row{
 	margin-top: 70px;
 }
+.firstrow{
+	margin-top: 30px;
+}
 
 /***********project Dash***************/
 .component{
@@ -86,7 +95,7 @@ color:#484349;
 
 }
 .main-plant{
-	padding-left: 80px;
+	padding-left: 100px;
 }
 .main-plant img{
 	width: 110px;
@@ -98,8 +107,14 @@ color:#484349;
 	padding-left: 20px;
 	padding-top: 2px;
 	color: white;
+	position: relative;
 
 }
+.next-step .water{
+position: absolute;
+top:20;
+right:20;
+color: #007366;}
 .next-step h2{
 	margin-top: 10px;
 }
@@ -110,6 +125,7 @@ color:#484349;
 	width: 300px;
 	margin-top: 15px;
 }
+
 .encourage{
 	float: right;
 	position: relative;
@@ -118,7 +134,8 @@ color:#484349;
 	display: inline-block;
 }
 #encourage-btn{
-	background:#007366;
+/*	display: none;
+*/		background:#007366;
 	border: none;
 	  position: absolute;
   	bottom: 20;
@@ -131,7 +148,33 @@ color:#484349;
   	padding: 10px;
 
 }
+.next-step .load{
+	display: none;
+	background:url('../assets/icons/ellipsis.gif') no-repeat right center;
+	background-size: 30%;
+	background-position:50% 60%;
 
+
+
+		border: none;
+	  position: absolute;
+  	bottom: 20;
+  	right: 100;
+/*  	padding: 10px 40px;
+*/  	box-shadow: 0 2px 0 0 rgba(0,0,0,0.50);
+  	border-radius: 3px;
+  	font-weight: 600;
+  	width: 160px;
+  	padding: 10px;
+
+}
+button{
+	background-color: inherit;
+}
+.next-step .loader-gif{
+	background:url('../assets/icons/ellipsis.gif') no-repeat right center;
+	background-size: 30%;
+}
 .encourage img{
 	width: 50px;
 	 position: absolute;
@@ -212,12 +255,13 @@ margin-top: 15px;
 }
 .project-buzz{
 	color:white;
-	padding-top: 1px;	
+	padding-top: 2px;	
 	padding-left: 20px;
-	padding-top: 2px;
+	padding-top: 1px;
 	background-color: #484349;
 }
 .project-buzz h3{
+	margin-top: 15px;
 	margin-bottom: 15px;
 }
 .meetname{
@@ -234,6 +278,7 @@ margin-top: 15px;
 }
 .meetright{
 	margin-left: 52px;
+	color:#333;
 }
 
 .project-buzz {
@@ -244,4 +289,32 @@ margin-top: 15px;
 }
 .calendarprofilepic2{
 	margin-left: 117px;
+}
+.right{
+    float: right;
+}
+
+.plantimg{
+        position: absolute;
+        z-index: 5;
+ }
+.showimg{
+        z-index: 1;
+ }
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

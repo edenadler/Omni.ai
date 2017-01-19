@@ -2,6 +2,94 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19142",
 "files": {
+	"\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28008,
+		"inputAbbreviatedPath": "\/1.png",
+		"outputAbbreviatedPath": "\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32877,
+		"inputAbbreviatedPath": "\/2.png",
+		"outputAbbreviatedPath": "\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35971,
+		"inputAbbreviatedPath": "\/3.png",
+		"outputAbbreviatedPath": "\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39096,
+		"inputAbbreviatedPath": "\/4.png",
+		"outputAbbreviatedPath": "\/4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39998,
+		"inputAbbreviatedPath": "\/5.png",
+		"outputAbbreviatedPath": "\/5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/6.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 43363,
+		"inputAbbreviatedPath": "\/6.png",
+		"outputAbbreviatedPath": "\/6.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/7.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48153,
+		"inputAbbreviatedPath": "\/7.png",
+		"outputAbbreviatedPath": "\/7.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/8.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53811,
+		"inputAbbreviatedPath": "\/8.png",
+		"outputAbbreviatedPath": "\/8.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/addMember.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -86,6 +174,17 @@
 		"initialSize": 19077,
 		"inputAbbreviatedPath": "\/assets\/icons\/gmail.png",
 		"outputAbbreviatedPath": "\/assets\/icons\/gmail.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/icon-back.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1641,
+		"inputAbbreviatedPath": "\/assets\/icons\/icon-back.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/icon-back.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -211,93 +310,14 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/functions\/plant_animation\/1.png": {
-		"fileType": 32768,
+	"\/css\/style.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 28008,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/1.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/1.png",
+		"inputAbbreviatedPath": "\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 32877,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/2.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/3.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 35971,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/3.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/3.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/4.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 39096,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/4.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/4.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/5.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 39998,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/5.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/5.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/6.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 43363,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/6.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/6.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/7.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 48153,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/7.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/7.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/functions\/plant_animation\/8.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 53811,
-		"inputAbbreviatedPath": "\/functions\/plant_animation\/8.png",
-		"outputAbbreviatedPath": "\/functions\/plant_animation\/8.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/functions\/plant_animation\/fadeIndex.html": {
 		"fileType": 8192,
@@ -322,6 +342,33 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/MainDashboard.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/MainDashboardbu.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/MainDashboardbu.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/MainDashboardbu2.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/MainDashboardbu2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/MainDashboardbu3.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/MainDashboardbu3.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
