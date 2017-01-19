@@ -62,11 +62,11 @@
 					<main>
 						<div className="container">
 							<div className="row firstrow">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant="5.png"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant="1.png"/>
 								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant ="assets/deadplant.gif"/>
 							</div>
 							<div className="row">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant= "2.png"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant= "5.png"/>
 								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant ="8.png"/>
 							</div>
 						</div>
@@ -218,7 +218,7 @@
 	var ProjectItem = React.createClass({
 		getDefaultProps: function(){
 			return {
-				projectName: "Untitled",
+				projectName: "Hackathon",
 			}
 		},
 		getInitialState: function(){
