@@ -1,30 +1,4 @@
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
-    <script type="text/javascript">
-      // Your Client ID can be retrieved from your project in the Google
-      // Developer Console, https://console.developers.google.com
-     
-
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
-  </head>
-  <body>
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Gmail API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
-      </button>
-    </div>
-    <pre id="output"></pre>
-
-    <script>
-     var CLIENT_ID = '26749447268-vsage3jpq227o4qk0u6nqbjesn658kk1.apps.googleusercontent.com';
+    var CLIENT_ID = '26749447268-vsage3jpq227o4qk0u6nqbjesn658kk1.apps.googleusercontent.com';
 
       var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
       var subjects =[];
@@ -177,7 +151,3 @@ function generateScore(projectName, maxScore){
   });
   return counter/maxScore;
 }
-
-    </script>
-  </body>
-</html>
