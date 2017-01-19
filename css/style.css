@@ -180,7 +180,7 @@ width: 16px;
 }
 .team-members h3{
 margin-top: 15px;
-	}
+}
 .calendar{
 	padding-left: 20px;
 	padding-top: 2px;
@@ -211,7 +211,15 @@ margin-top: 15px;
 	
 }
 .project-buzz{
+	color:white;
+	padding-top: 1px;	
+	padding-left: 20px;
+
 	background-color: #484349;
+}
+.project-buzz h3{
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .meetname{
 	font-weight: 700;
@@ -227,4 +235,31 @@ margin-top: 15px;
 }
 .meetright{
 	margin-left: 52px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.project-buzz {
+}
+
+.calendarprofilepic{
+	margin-left: 114px;
+}
+.calendarprofilepic2{
+	margin-left: 117px;
 }
