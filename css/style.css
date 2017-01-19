@@ -214,12 +214,11 @@ margin-top: 15px;
 	color:white;
 	padding-top: 1px;	
 	padding-left: 20px;
-
+	padding-top: 2px;
 	background-color: #484349;
 }
 .project-buzz h3{
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .meetname{
 	font-weight: 700;
