@@ -62,12 +62,12 @@
 					<main>
 						<div className="container">
 							<div className="row firstrow">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant="5.png"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant ="assets/deadplant.gif"/>
 							</div>
 							<div className="row">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem}/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant= "2.png"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant ="8.png"/>
 							</div>
 						</div>
 					</main>
@@ -207,7 +207,7 @@
 
 			return(
 				<div className="plant">
-					<img src="assets/plant.png" alt=""/>
+					<img src={this.props.plant} alt=""/>
 				</div>
 
 			)
@@ -242,7 +242,7 @@
 
 				<div onClick={this.handleClickProjectItem}>
 					<div className="project-item col-lg-6">
-						<PlantImage />
+						<PlantImage plant = {this.props.plant} />
 
 						<div className="project-card">
 							<h2>{this.props.projectName}</h2>
