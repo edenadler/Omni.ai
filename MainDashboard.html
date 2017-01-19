@@ -83,7 +83,7 @@
 				ProjectInfo:{
 							title:"Kendama",
 							teamMembers: ["Gideon", "Valentine", "Eden", "Aviram"],
-							ProfilePics:["assets/profilepic/gideon.jpg","assets/profilepic/valentine.jpg",,"assets/profilepic/eden.jpg","assets/profilepic/aviram.jpg"]
+							ProfilePics:["assets/profilepic/Gideon.jpg","assets/profilepic/Valentine.jpg",,"assets/profilepic/Eden.jpg","assets/profilepic/Aviram.jpg"]
 				},
 
 			}
@@ -197,7 +197,17 @@
 	var NextStepComp = React.createClass({
 		render:function(){
 			return(
-			<div className="next-step component"></div>
+			<div className="next-step component">
+				<h3>Next Step</h3>
+				<h2>Eden has to respond to this email</h2>
+				<div className="email">
+					<img src="assets/email.png" alt="" />
+				</div>
+				<div className="encourage">
+				<button id="encourage-btn">Encourage Eden!</button>
+				</div>
+
+			</div>
 			)
 		}
 

@@ -82,6 +82,24 @@ color:#484349;
 	background-color: #18A999;
 	width: 700px;
 	height:250px;
+	padding-left: 20px;
+	padding-top: 2px;
+	color: white;
+
+}
+.next-step h2{
+	margin-top: 10px;
+}
+.next-step .email{
+	display: inline-block;
+}
+.next-step .email img{
+	width: 300px;
+	margin-top: 15px;
+}
+#encourage-btn{
+	background:#007366;
+	border: none;
 }
 .recent-activity{
 	padding-left: 20px;
