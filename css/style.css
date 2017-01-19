@@ -69,6 +69,8 @@ main{
 box-shadow: 0 1px 15px 1px rgba(0,0,0,0.18);
 border-radius: 3px;
 background-color: white;
+color:#484349;
+
 }
 .main-plant{
 	padding-left: 80px;
@@ -91,7 +93,9 @@ margin-top: 15px;
 	
 }
 .recent-activity .date-left{
-margin-left: 80px;	
+margin-left: 80px;
+color: black;	
+font-weight: 600;
 }
 .recent-activity ul{
 	list-style: none;
