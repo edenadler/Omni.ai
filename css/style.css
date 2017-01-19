@@ -1,3 +1,17 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 
 body{
 	margin: 0;
@@ -96,9 +110,22 @@ color:#484349;
 	width: 300px;
 	margin-top: 15px;
 }
+.encourage{
+	float: right;
+	position: relative;
+	height: 150px;
+	width: 200px;
+	display: inline-block;
+	padding-bottom: 20px;
+}
 #encourage-btn{
 	background:#007366;
 	border: none;
+	  position: absolute;
+  	bottom: 0;
+  	left: 0;
+}
+
 }
 .recent-activity{
 	padding-left: 20px;
