@@ -18,7 +18,7 @@
 	</div>
 		<div id="main-page"></div>
 		<div id="notification">
-			<p><span>natalie@israeltechallenge.com</span> just sended you an email regarding the Zara project</p>
+			<p><span>valentineganansia@gmail.com</span> just sended you an email regarding the Zara project</p>
 		</div>
 	</div>
 	<script type="text/babel">
@@ -40,7 +40,7 @@
 		handleClickedProjectItem: function(update){
 			var that = this;
 			preloader(1000);
-			setTimeout(function(){console.log(that);
+			setTimeout(function(){
 				that.setState({isShowMain: update});},1600);
 			
 		},
@@ -81,11 +81,11 @@
 					<main>
 						<div className="container">
 							<div className="row firstrow">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant="1.png" name="ZARA"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant="assets/1.png" name="ZARA"/>
 								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant ="assets/deadplant.gif" name="BurgerKing App"/>
 							</div>
 							<div className="row">
-								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant= "5.png" name="Startup Landingpage"/>
+								<ProjectItem handleClickedProjectItem={this.props.handleClickedProjectItem} plant= "assets/5.png" name="Startup Landingpage"/>
 								<div onClick={this.handleClickProjectItem}>
 					<div className="project-item col-lg-6">
 						<PlantImage plant = {this.props.plant} />
@@ -108,7 +108,6 @@
 	var ProjDash = React.createClass({
 
 		returnToHome: function(){
-		console.log("clicked")
 			this.props.handleClickedProjectItem(true)
 		},
 		componentDidMount: function() {
@@ -116,41 +115,38 @@
   },
 
 		changePlant: function(){
-			  console.log("i work");
+			 
 
 
         var myVar = $(".showimg").eq(0).attr('id');
-        console.log(myVar);
 
         $("#encourage-btn").click(function (e) {
         	$("#notification p").html("<span>Good Job!</span> Your reply is sent to yoannag@zaragroupisrael.com");
         	$("#notification").css("right","500px")
             var myVar = parseInt($(".showimg").eq(0).attr('id'));
             var newVar = myVar + 1;
-            console.log(myVar);
             e.preventDefault();
             if(newVar<8){
             	$("#notification").slideDown();
             	setTimeout(function(){$("#notification").slideUp()},4000)
                 $(".showimg")
                         .delay(1000).fadeOut(0, function () {
-                            $(".showimg").attr('src', (newVar) + ".png");
+                            $(".showimg").attr('src', 'assets/'+ (newVar) + ".png");
                             $(".showimg").eq(0).attr('id', newVar);
                         })
                         .fadeIn(200);
 
                 $(".backimg").delay(1010).fadeOut(500, function () {
-                    $(".backimg").attr('src', (newVar) + ".png");
+                    $(".backimg").attr('src', 'assets/'+(newVar) + ".png");
                     $(".backimg").eq(0).attr('id', newVar);
                 }).fadeIn(10);
             }
 
         });
           $(".main-plant").click(function (e) {
-          	$("#notification p").html("<span>natalie@israeltechallenge.com</span> just sended you an email regarding the Zara project")
+          	$("#notification p").html("<span>valentineganansia@gmail.com</span> just sended you an email regarding the Zara project")
             var myVar = parseInt($(".showimg").eq(0).attr('id'));
             var newVar = myVar + 1;
-            console.log(myVar);
             e.preventDefault();
                     	$("#notification").css("right","400px")
 
@@ -159,13 +155,13 @@
             	setTimeout(function(){$("#notification").slideUp()},4000)
                 $(".showimg")
                         .delay(1000).fadeOut(0, function () {
-                            $(".showimg").attr('src', (newVar) + ".png");
+                            $(".showimg").attr('src',  'assets/' + (newVar) + ".png");
                             $(".showimg").eq(0).attr('id', newVar);
                         })
                         .fadeIn(200);
 
                 $(".backimg").delay(1010).fadeOut(500, function () {
-                    $(".backimg").attr('src', (newVar) + ".png");
+                    $(".backimg").attr('src',  'assets/' + (newVar) + ".png");
                     $(".backimg").eq(0).attr('id', newVar);
                 }).fadeIn(10);
             }
@@ -175,18 +171,17 @@
         $("#lower").click(function (e) {
             var myVar = parseInt($(".showimg").eq(0).attr('id'));
             var newVar = myVar - 1;
-            console.log(myVar);
             e.preventDefault();
             if(newVar<8){
                 $(".showimg")
                         .delay(1000).fadeOut(0, function () {
-                    $(".showimg").attr('src', (newVar) + ".png");
+                    $(".showimg").attr('src',  'assets/' + (newVar) + ".png");
                     $(".showimg").eq(0).attr('id', newVar);
                 })
                         .fadeIn(200);
 
                 $(".backimg").delay(1010).fadeOut(500, function () {
-                    $(".backimg").attr('src', (newVar) + ".png");
+                    $(".backimg").attr('src', 'assets/' + (newVar) + ".png");
                     $(".backimg").eq(0).attr('id', newVar);
                 }).fadeIn(10);
             }
@@ -225,8 +220,8 @@
 									<div className="col-md-4">
 										<div className="main-plant">
 											<div className="plants">
-										        <img className="plantimg showimg" id="1" src="1.png" />
-										        <img className="plantimg backimg" id="0" src="1.png" />
+										        <img className="plantimg showimg" id="1" src="assets/1.png" />
+										        <img className="plantimg backimg" id="0" src="assets/1.png" />
    									</div>
 
 										</div>
@@ -356,7 +351,7 @@
 					<img src="assets/email.png" alt="" />
 				</div>
 				<div className="encourage clearfix">
-				<button onClick={this.changeButton}id="encourage-btn">Send Reply</button>
+				<button onClick={this.changeButton} id="encourage-btn">Send Reply</button>
 				<button onClick={this.changeButton} className="load"></button>
 				<img src="assets/profilepic/Eden.png" alt="" />
 
